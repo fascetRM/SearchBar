@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+		<input ng-model='$ctrl.query'>
+			<span class='$ctrl.icon'></span>
+		</input>
+		<span ng-class='{"hidden":$ctrl.showHelp}'>Show Help/span>
+		<div>
+			<ul>
+				<li ng-repeat='item in $ctrl.activeList | searchFilter:$ctrl.query'>
+					{{item}}
+				</li>
+			</ul>
+		</div>
+    </div>
+  </div>
+</div>
